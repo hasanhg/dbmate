@@ -93,9 +93,6 @@ func (drv *Driver) openClickHouseDB() (*sql.DB, error) {
 		return nil, err
 	}
 
-	// connect to clickhouse database
-	clickhouseURL.Path = "/default"
-
 	return sql.Open("clickhouse", clickhouseURL.String())
 }
 
